@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowRight, Sparkles, Truck, ShieldCheck, Heart, Instagram, Stars } from "lucide-react";
-import hero from "@/assets/hero.jpg";
+import hero from "@/assets/hero2.png";
 import { Button } from "@/components/ui/button";
 import { ProductCard } from "@/components/ProductCard";
 import { products, categories } from "@/lib/products";

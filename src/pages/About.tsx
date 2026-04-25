@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Heart, Sparkles, Award, Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import hero from "@/assets/hero.jpg";
+import hero from "@/assets/hero2.png";
 
 const About = () => {
   useEffect(() => { document.title = "About — Lejiro Clothing"; }, []);
