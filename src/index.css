@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Lejiro Clothing — Premium emerald & gold design system. All HSL. */
+@layer base {
+  :root {
+    --background: 40 33% 98%;            /* warm off-white */
+    --foreground: 160 30% 8%;             /* near-black with green undertone */
+
+    --card: 0 0% 100%;
+    --card-foreground: 160 30% 8%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 160 30% 8%;
+
+    /* Brand: deep emerald green */
+    --primary: 160 78% 16%;               /* #0A3D2F vibe */
+    --primary-foreground: 45 80% 92%;
+    --primary-glow: 160 60% 28%;
+
+    /* Brand: metallic gold */
+    --gold: 43 65% 52%;                   /* #D4AF37 */
+    --gold-foreground: 160 78% 12%;
+    --gold-soft: 43 70% 88%;
+
+    --secondary: 38 30% 94%;              /* warm beige */
+    --secondary-foreground: 160 30% 12%;
+
+    --muted: 38 25% 95%;
+    --muted-foreground: 160 8% 38%;
+
+    --accent: 43 65% 52%;
+    --accent-foreground: 160 78% 12%;
+
+    --destructive: 0 75% 45%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 38 20% 88%;
+    --input: 38 20% 88%;
+    --ring: 160 78% 22%;
+
+    --radius: 0.75rem;
+
+    /* Brand gradients & shadows */
+    --gradient-emerald: linear-gradient(135deg, hsl(160 78% 12%), hsl(160 60% 22%));
+    --gradient-gold: linear-gradient(135deg, hsl(43 75% 58%), hsl(38 70% 45%));
+    --gradient-hero: linear-gradient(180deg, hsl(160 78% 8% / 0.05), hsl(160 78% 8% / 0.55));
+    --shadow-luxe: 0 20px 60px -20px hsl(160 78% 12% / 0.35);
+    --shadow-gold: 0 10px 40px -12px hsl(43 65% 45% / 0.45);
+    --shadow-soft: 0 4px 20px -8px hsl(160 30% 15% / 0.12);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 160 40% 6%;
+    --foreground: 40 33% 96%;
+    --card: 160 35% 9%;
+    --card-foreground: 40 33% 96%;
+    --popover: 160 35% 9%;
+    --popover-foreground: 40 33% 96%;
+    --primary: 43 65% 55%;
+    --primary-foreground: 160 78% 10%;
+    --secondary: 160 30% 14%;
+    --secondary-foreground: 40 33% 96%;
+    --muted: 160 25% 14%;
+    --muted-foreground: 40 15% 70%;
+    --accent: 43 65% 55%;
+    --accent-foreground: 160 78% 10%;
+    --destructive: 0 70% 45%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 160 25% 16%;
+    --input: 160 25% 16%;
+    --ring: 43 65% 55%;
+  }
+}
+
+@layer base {
+  * { @apply border-border; }
+  html { scroll-behavior: smooth; }
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', system-ui, sans-serif;
+    font-feature-settings: "ss01", "cv11";
+  }
+  h1, h2, h3, .font-display {
+    font-family: 'Playfair Display', Georgia, serif;
+    letter-spacing: -0.01em;
+  }
+}
+
+@layer utilities {
+  .bg-gradient-emerald { background: var(--gradient-emerald); }
+  .bg-gradient-gold { background: var(--gradient-gold); }
+  .text-gradient-gold {
+    background: var(--gradient-gold);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .shadow-luxe { box-shadow: var(--shadow-luxe); }
+  .shadow-gold { box-shadow: var(--shadow-gold); }
+  .shadow-soft { box-shadow: var(--shadow-soft); }
+  .container-luxe { @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8; }
+  .hover-lift { @apply transition-all duration-300 hover:-translate-y-1 hover:shadow-luxe; }
+  .story-link {
+    @apply relative inline-block after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-gold after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left;
+  }
+}
