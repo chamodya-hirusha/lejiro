@@ -1,6 +1,13 @@
 export type ProductCategory = "Activewear" | "Casual" | "Dresses" | "Co-ord Sets" | "Bottoms";
 export type Size = "S" | "M" | "L" | "XL";
 
+import ribbedRed from "@/assets/proudct/product 1 (1).jpeg";
+import ribbedMauveFront from "@/assets/proudct/WhatsApp Image 2026-04-25 at 10.36.06 AM (1).jpeg";
+import ribbedMauveBack from "@/assets/proudct/product 1 (10).jpeg";
+import tieredMaroon from "@/assets/proudct/product 1 (2).jpeg";
+import tieredBrown from "@/assets/proudct/product 1 (3).jpeg";
+import tieredPink from "@/assets/proudct/product 1 (5).jpeg";
+
 export interface Product {
   id: string;
   slug: string;
@@ -21,6 +28,26 @@ const u = (id: string, w = 800) =>
   `https://images.unsplash.com/${id}?auto=format&fit=crop&w=${w}&q=80`;
 
 export const products: Product[] = [
+  {
+    id: "15", slug: "ribbed-pocket-mini-dress",
+    name: "Aria Ribbed Pocket Mini Dress",
+    price: 3890, originalPrice: 4800,
+    category: "Dresses", sizes: ["S", "M", "L", "XL"],
+    images: [ribbedRed, ribbedMauveFront, ribbedMauveBack],
+    description: "A versatile mini dress in a soft ribbed knit. Features functional front pockets and a flattering A-line silhouette. Perfect for layering or wearing on its own.",
+    material: "95% Cotton, 5% Spandex • Ribbed texture • Functional pockets",
+    badge: "New", rating: 5.0, reviews: 12,
+  },
+  {
+    id: "16", slug: "luna-tiered-midi-dress",
+    name: "Luna Tiered Midi Dress",
+    price: 4490, originalPrice: 5900,
+    category: "Dresses", sizes: ["S", "M", "L", "XL"],
+    images: [tieredMaroon, tieredBrown, tieredPink],
+    description: "Flowy tiered midi dress with delicate spaghetti straps. Made from breathable fabric that's perfect for warm days and evening outings.",
+    material: "Lightweight viscose • Tiered design • Adjustable straps",
+    badge: "Best Seller", rating: 4.9, reviews: 45,
+  },
   {
     id: "1", slug: "emerald-power-leggings",
     name: "Emerald Power High-Waist Leggings",

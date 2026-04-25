@@ -27,7 +27,7 @@ export const Navbar = () => {
     <header className="sticky top-0 z-40 w-full border-b border-border/60 bg-background/85 backdrop-blur-lg">
       {/* announcement strip */}
       <div className="bg-gradient-emerald text-primary-foreground text-xs sm:text-sm py-2 text-center font-medium tracking-wide">
-        ✨ Island-wide <span className="text-gold">Cash on Delivery</span> &nbsp;•&nbsp; Free shipping over Rs. 8,000 &nbsp;•&nbsp; WhatsApp 071 112 5159
+        ✨ Island-wide <span className="text-gold">Cash on Delivery</span> &nbsp;•&nbsp; Free shipping over Rs. 8,000
       </div>
       <div className="container-luxe flex h-16 items-center justify-between gap-4">
         <div className="flex items-center gap-2">
@@ -57,10 +57,6 @@ export const Navbar = () => {
                 ))}
                 <NavLink to="/contact" onClick={() => setOpen(false)} className="rounded-md px-3 py-3 text-base font-medium hover:bg-secondary/60">Contact</NavLink>
               </nav>
-              <div className="mt-6 rounded-lg border border-gold/40 bg-gold-soft/40 p-4">
-                <p className="text-sm font-semibold text-primary">Order on WhatsApp</p>
-                <p className="mt-1 text-sm text-muted-foreground">071 112 5159</p>
-              </div>
             </SheetContent>
           </Sheet>
           <Logo />

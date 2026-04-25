@@ -1,7 +1,6 @@
 import { Outlet } from "react-router-dom";
 import { Navbar } from "./Navbar";
 import { Footer } from "./Footer";
-import { WhatsAppFab } from "./WhatsAppFab";
 import { CartDrawer } from "./CartDrawer";
 
 export const Layout = () => (
@@ -11,7 +10,6 @@ export const Layout = () => (
       <Outlet />
     </main>
     <Footer />
-    <WhatsAppFab />
     <CartDrawer />
   </div>
 );

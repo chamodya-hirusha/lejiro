@@ -152,12 +152,9 @@ const ProductDetail = () => {
             <Button variant="emerald" size="lg" onClick={handleAdd}>Add to Cart</Button>
             <Button variant="gold" size="lg" onClick={handleBuyNow}>Buy Now</Button>
           </div>
-          <div className="mt-3 grid grid-cols-2 gap-3">
-            <Button variant="outline" size="lg" onClick={() => { toggleWish(product.id); toast(inWish ? "Removed from wishlist" : "Saved to wishlist"); }}>
-              <Heart className={`h-4 w-4 ${inWish ? "fill-gold text-gold" : ""}`} /> {inWish ? "Saved" : "Wishlist"}
-            </Button>
-            <Button variant="whatsapp" size="lg" asChild>
-              <a href={whatsappUrl(`Hi! I'd like to order: ${product.name} (Size ${size ?? product.sizes[0]}).`)} target="_blank" rel="noreferrer">Order on WhatsApp</a>
+          <div className="mt-3">
+            <Button variant="outline" size="lg" onClick={() => { toggleWish(product.id); toast(inWish ? "Removed from wishlist" : "Saved to wishlist"); }} className="w-full border-dashed">
+              <Heart className={`h-4 w-4 mr-2 ${inWish ? "fill-gold text-gold" : ""}`} /> {inWish ? "Saved in Wishlist" : "Add to Wishlist"}
             </Button>
           </div>
 
